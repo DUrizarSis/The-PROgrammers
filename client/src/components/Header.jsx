@@ -42,7 +42,7 @@ export default function Header() {
               <Link to='/'>Home</Link>
             </Navbar.Link>
             <Navbar.Link active={path === '/about'} as={'div'}>
-              <Link to='/about'>About</Link>
+              <Link to='/about' >About</Link>
             </Navbar.Link>
             <Navbar.Link active={path === '/projects'} as={'div'}>
               <Link to='/projects'>Projects</Link>
@@ -50,13 +50,13 @@ export default function Header() {
         </Navbar.Toggle>
       </div>
         <Navbar.Collapse>
-          <Navbar.Link active={path === '/'} as={'div'}>
+          <Navbar.Link active={path === '/'} className={path === '/' ? 'bg-purple-600' : ''} as={'div'}>
             <Link to='/'>Home</Link>
           </Navbar.Link>
-          <Navbar.Link active={path === '/about'} as={'div'}>
+          <Navbar.Link active={path === '/about'} className={path === '/about' ? 'bg-purple-600' : ''} as={'div'}>
             <Link to='/about'>About</Link>
           </Navbar.Link>
-          <Navbar.Link active={path === '/projects'} as={'div'}>
+          <Navbar.Link active={path === '/projects'}  className={path === '/projects' ? 'bg-purple-600' : ''} as={'div'}>
             <Link to='/projects'>Projects</Link>
           </Navbar.Link>
         </Navbar.Collapse>
