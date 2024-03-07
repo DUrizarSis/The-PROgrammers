@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Navbar, TextInput } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/Light-logo.png';
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaMoon } from 'react-icons/fa'
 
@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <Navbar className='border-b-2'>
       <Link  to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-        <img className='max-h-11' src={Logo} alt="The PROgrammers Logo" />
+        <img className='h-7 md:h-10' src={Logo} alt="The PROgrammers Logo" />
       </Link>
 
       <form>
@@ -38,15 +38,15 @@ export default function Header() {
           </Button>
         </Link>
         <Navbar.Toggle>
-            <Navbar.Link active={path === '/'} as={'div'}>
-              <Link to='/'>Home</Link>
-            </Navbar.Link>
-            <Navbar.Link active={path === '/about'} as={'div'}>
-              <Link to='/about' >About</Link>
-            </Navbar.Link>
-            <Navbar.Link active={path === '/projects'} as={'div'}>
-              <Link to='/projects'>Projects</Link>
-            </Navbar.Link>
+          <Navbar.Link active={path === '/'} className={path === '/' ? 'text-purple-600' : ''} as={'div'}>
+            <Link to='/'>Home</Link>
+          </Navbar.Link>
+          <Navbar.Link active={path === '/about'} as={'div'}>
+            <Link to='/about' >About</Link>
+          </Navbar.Link>
+          <Navbar.Link active={path === '/projects'} as={'div'}>
+            <Link to='/projects'>Projects</Link>
+          </Navbar.Link>
         </Navbar.Toggle>
       </div>
         <Navbar.Collapse>
